@@ -1,2 +1,9 @@
 def get_val(collection, key, default='git'):
-    pass
+
+    if not collection:
+        return default
+
+    if key not in list(collection):
+        return default
+
+    return collection[key]
